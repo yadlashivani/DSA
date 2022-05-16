@@ -1,0 +1,13 @@
+#Function to remove duplicates from sorted linked list.
+def removeDuplicates(head):
+    #code here
+    if head is None:
+        return 
+    else:
+        node = head
+        while node.next is not None:
+            if node.data == node.next.data:
+                node.next = node.next.next
+            else:
+                node = node.next
+    return head
