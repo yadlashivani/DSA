@@ -1,0 +1,14 @@
+def reverseDLL(head):
+    #return head after reversing
+    if head is None:
+            return
+    curr = head
+    prev = None
+    while curr:
+        next = curr.next
+        curr.next = prev 
+        prev = curr
+        curr = next
+    return prev
+        
+        
