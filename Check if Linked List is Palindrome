@@ -1,0 +1,13 @@
+#Function to check whether the list is palindrome.
+class Solution:
+    def isPalindrome(self, head):
+        #code here
+        ans = ""
+        node = head 
+        while node:
+            ans += str(node.data)
+            node = node.next
+        if ans[:] == ans[::-1]:
+            return 1
+        else:
+            return 0
