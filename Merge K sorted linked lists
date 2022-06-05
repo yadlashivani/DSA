@@ -1,0 +1,20 @@
+class Solution:
+    #Function to merge K sorted linked list.
+    def mergeKLists(self,arr,K):
+        # code here
+        # return head of merged list
+        input_ll = arr
+        arr = []
+        for i in input_ll:
+            node = i
+            while node:
+                arr.append(node.data)
+                node = node.next
+        arr.sort()
+        head = Node(None)
+        curr = head
+        for i in arr:
+            node = Node(i)
+            curr.next = node
+            curr = curr.next
+        return head.next
