@@ -1,0 +1,10 @@
+class Solution:
+
+    #Function to find if there is a celebrity in the party or not.
+    def celebrity(self, M, n):
+        # code here 
+        c = [0]*n
+        if c in M and M.count(c) == 1:
+            return M.index(c)
+        else:
+            return -1
