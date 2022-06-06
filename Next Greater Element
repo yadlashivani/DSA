@@ -1,0 +1,13 @@
+#without using stacks
+class Solution:
+    def nextLargerElement(self,arr,n):
+        #code here
+        temp = []
+        for i in range(n):
+            ans = -1
+            for j in range(i+1,n):
+                if arr[i] < arr[j]:
+                    ans = arr[j]
+                    break
+            temp.append(ans)
+        return temp
