@@ -1,0 +1,15 @@
+def reverseLevelOrder(root):
+    # code here
+    res=[]
+    q=[]
+    q.append(root)
+    while q:
+        node=q.pop(0)
+        res.append(node.data)
+     
+        if (node.right):
+            q.append(node.right)
+        if (node.left):
+            q.append(node.left)
+            
+    return res[::-1]
