@@ -1,0 +1,9 @@
+#Function to find the minimum element in the given BST.
+def minValue(root):
+    ##Your code here
+    if not root:
+        return -1
+    temp = root
+    while temp.left:
+        temp = temp.left
+    return temp.data
