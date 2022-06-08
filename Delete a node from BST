@@ -1,0 +1,30 @@
+#Function to delete a node from BST.
+def minNode(root):
+    if not root:
+        return
+    curr = root
+    while curr.left:
+        curr = curr.left
+    return curr
+        
+def deleteNode(root, X):
+    # code here.
+    if not root:
+        return
+    if root.data > X:
+        root.left = deleteNode(root.left,X)
+    elif root.data < X:
+        root.right = deleteNode(root.right,X)
+    else:
+        if root.left is None:
+            temp = root.right
+            root.right = None
+            return temp
+        if root.right is None:
+            temp = root.left
+            root.left = None
+            return temp
+        temp = minNode(root.right)
+        root.data = temp.data
+        root.right = deleteNode(root.right,temp.data)
+    return root
