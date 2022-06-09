@@ -1,0 +1,8 @@
+class Solution:
+    def arraySortedOrNot(self, arr, n):
+        # code here
+        arr1 = sorted(arr)
+        if arr1 == arr:
+            return True
+        else:
+            return False
