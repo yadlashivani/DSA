@@ -1,0 +1,13 @@
+class Solution:
+    def majorityElement(self, A, N):
+        #Your code here
+        hashing = {}
+        for i in A:
+            if i not in hashing.keys():
+                hashing[i] = 1
+            else:
+                hashing[i] += 1
+        for num,count in hashing.items():
+            if count > N//2:
+                return num
+        return -1
