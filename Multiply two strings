@@ -1,0 +1,8 @@
+class Solution:
+    def multiplyStrings(self,s1,s2):
+        # code here
+        # return the product string
+        t1 = int(s1)
+        t2 = int(s2)
+        p = t1*t2
+        return str(p)
