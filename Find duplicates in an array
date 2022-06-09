@@ -1,0 +1,12 @@
+class Solution:
+    def duplicates(self, arr, n): 
+    	# code here
+    	res = []
+    	arr = sorted(arr)
+    	for i in range(n-1):
+    	    if arr[i] == arr[i+1]:
+    	        res.append(arr[i])
+    	if res :
+    	    return sorted(list(set(res)))
+    	else:
+    	    return [-1]
