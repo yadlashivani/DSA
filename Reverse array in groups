@@ -1,0 +1,10 @@
+	def reverseInGroups(self, arr, N, K):
+		# code here
+		i = 0
+		while i<N:
+		    a = (i+K)
+		    if a > N:
+		        a = N
+		    arr[i:a] = arr[i:a][::-1]
+		    i += K
+		
