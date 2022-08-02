@@ -1,0 +1,7 @@
+class Solution:
+    def countSquares(self, N):
+        # code here 
+        ans = N**0.5
+        if int(ans) == ans:
+            return int(ans-1)
+        return int(ans)
