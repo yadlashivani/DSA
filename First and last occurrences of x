@@ -1,0 +1,13 @@
+def find(arr,n,x):
+    # code here
+    ans = [-1]*2
+    for i in range(n):
+        if arr[i] == x:
+            ans[0] = i
+            break
+    arr[:] = arr[::-1]
+    for i in range(n):
+        if arr[i] == x:
+            ans[1] = n-i-1
+            break
+    return ans
