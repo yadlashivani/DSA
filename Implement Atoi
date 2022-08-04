@@ -1,0 +1,11 @@
+class Solution:
+    # your task is to complete this function
+    # function should return an integer
+    def atoi(self,string):
+        # Code here
+        if string[0] == "-" and string[1:].isdigit():
+            return string
+        elif string.isdigit():
+            return string
+        else:
+            return -1
