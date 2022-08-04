@@ -1,0 +1,7 @@
+class Solution:
+    def findTwoElement( self,arr, n): 
+        # code here
+        original = sum(range(n+1))
+        miss =  original- sum(set(arr))
+        repeat = sum(arr) + miss - original
+        return repeat,miss
