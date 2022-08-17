@@ -1,0 +1,10 @@
+class Solution:
+    def toyCount(self, N, K, arr):
+        # code here
+        arr.sort()
+        max_toys = 0
+        for i in range(N):
+            if arr[i] <= K:
+                K -= arr[i]
+                max_toys += 1
+        return max_toys
