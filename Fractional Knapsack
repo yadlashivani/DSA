@@ -1,0 +1,18 @@
+def fractionalknapsack(self, W,Items,n):
+        for i in range(n):
+            Items[i].ratio = ( Items[i].value)/( Items[i].weight)
+        Items.sort(key=lambda x:x.ratio,reverse=True)
+        used=0
+        total=0
+        for i in Items:
+            if used+i.weight<=W:
+                used+=i.weight
+                total+=i.value
+            else:
+                unused=W-used
+                value=i.ratio*unused
+                used+=unused
+                total+=value
+            if used==W:
+                break
+        return total
