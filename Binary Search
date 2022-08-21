@@ -1,0 +1,17 @@
+import math
+class Solution:	
+	def binarysearch(self, arr, n, k):
+		# code here
+		start = 0
+		end = n-1
+		middle = math.floor((start+end)/2) 
+		while start<=end and (arr[middle] != k):
+		    if k < arr[middle]:
+		        end = middle-1
+		    else:
+		        start = middle+1
+		    middle = math.floor((start+end)/2) 
+	    if arr[middle] == k:
+	        return middle
+	    else: 
+	        return -1
