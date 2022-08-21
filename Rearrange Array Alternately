@@ -1,0 +1,8 @@
+  def rearrange(self,arr, n): 
+        ##Your code here
+          s=[]
+          for i in range(n):
+              s.append(arr[n-1-i])
+              s.append(arr[i])
+          for i in range(0,n):
+              arr[i]=s[i]
